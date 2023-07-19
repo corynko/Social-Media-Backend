@@ -27,6 +27,7 @@ module.exports = {
     }
   },
 
+  // Update a previously posted thought
   async updateThought(req, res) {
     try {
       const thought = await Thoughts.findOneAndUpdate(
@@ -49,6 +50,7 @@ module.exports = {
       res.status(500).json(err);
     }
   },
+
   // create a new thought
   async createThought(req, res) {
     try {
@@ -99,15 +101,13 @@ module.exports = {
     }
   },
 
+  //delete a reaction to a thought
   async deleteReaction(req, res) {
     try {
       const thought = await Thoughts.findOneAndUpdate(
         { _id: req.params.thoughtId },
-        // const reaction = thought.reactions;
-        // console.log(reaction);
-
-        { $pull: { reactions: { reactionId: req.params.reactionId } } }
-        // { runValidators: true, new: true }
+        { $pull: { reactions: { _id: req.params.reactionId } } },
+        { runValidators: true, new: true }
       );
 
       if (!thought) {
