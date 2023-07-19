@@ -9,7 +9,7 @@ const reactionSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      get: (timestamp) => `My Formatted Date ${timestamp}`,
+      get: (timestamp) => `${timestamp}`,
     },
     reactionBody: {
       type: String,
@@ -42,7 +42,7 @@ const thoughtSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      get: (timestamp) => `My Formatted Date ${timestamp}`,
+      get: (timestamp) => `${timestamp}`,
     },
     username: {
       type: String,

@@ -14,7 +14,7 @@ module.exports = {
   // Get a single thought
   async getSingleThought(req, res) {
     try {
-      const thought = await Thoughts.findOne({ _id: req.params.userId });
+      const thought = await Thoughts.findOne({ _id: req.params.thoughtId });
 
       if (!thought) {
         return res.status(404).json({ message: "No thought with that ID" });
@@ -31,7 +31,7 @@ module.exports = {
     try {
       const thought = await Thoughts.findOneAndUpdate(
         {
-          _id: req.params.userId,
+          _id: req.params.thoughtId,
         },
         req.body,
         {
@@ -60,12 +60,11 @@ module.exports = {
     }
   },
 
-  //TODO: MAKE SURE THIS WORKS
   // Delete a thought and associated reactions
   async deleteThought(req, res) {
     try {
       const thought = await Thoughts.findOneAndDelete({
-        _id: req.params.userId,
+        _id: req.params.thoughtId,
       });
 
       if (!thought) {
