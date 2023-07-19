@@ -16,14 +16,16 @@ A working NoSQL database backend for a social media API, using MongoDB and Mongo
 
       * Download the repository, and navigate to the directory using your terminal
       * Run `npm i` to install the dependencies. Run `npx nodemon` to start the server
-      * You can test Get, Post, Put, and Delete operations for both users/friends and thoughts/reactions. Please refer to [this video](placeholder.com) for a demonstration
+      * You can test Get, Post, Put, and Delete operations for both users/friends and thoughts/reactions
+
+Please refer to [this video](https://u.pcloud.link/publink/show?code=XZcVbAVZFuYtyxlmUDVPKWo4b0PDQfD7OmDV) for a more detailed demonstration.
 
 ## Usage
 
 This is a proof of concept for a social API using MongoDB. As such, anyone who needs a social API using MongoDB will find it useful.
 
-![Starting the server in VSCode](./assets/images/image_1.jpg)
-![Testing routes in Insomnia](./assets/images/image_2.jpg)
+![Starting the server in VSCode](./public/assets/images/image_1.jpg)
+![Testing routes in Insomnia](./public/assets/images/image_2.jpg)
 
 ## License
 
