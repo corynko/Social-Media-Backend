@@ -1,6 +1,6 @@
 # Social Media Backend
 
-A working NoSQL database backend for a social media API, using MongoDB and Mongoose
+A working NoSQL database backend for a social media API, using NodeJS, MongoDB, and Mongoose
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -15,6 +15,7 @@ A working NoSQL database backend for a social media API, using MongoDB and Mongo
 ## Installation
 
       * Download the repository, and navigate to the directory using your terminal
+      * Ensure that NodeJS is properly installed
       * Run `npm i` to install the dependencies. Run `npx nodemon` to start the server
       * You can test Get, Post, Put, and Delete operations for both users/friends and thoughts/reactions
 
